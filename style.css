@@ -1,0 +1,219 @@
+/* Define colors to be used */
+:root {
+  --color-fg-alt: hsl(223, 82%, 56%);
+  --color-bg: hsl(0, 0%, 94%);
+  --color-bg-alt: hsl(0, 0%, 100%);
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  --color-navbar-fg: var(--color-fg-alt);
+  --color-navbar-bg: var(--color-bg-alt);
+  --color-navbar-active-fg: hsl(223, 82%, 82%);
+  --color-navbar-active-bg: hsl(223, 100%, 91%);
+  --color-navbar-border: var(--color-border); 
+
+  --color-price: green;
+  --color-price-background: hsl(223, 100%, 91%); 
+
+  --color-card-fg: var(--color-fg-alt);
+  --color-card-bg: var(--color-bg-alt);
+  --color-card-border: var(--color-border);
+
+  --horizontal-padding: 10%
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  background-color: var(--color-bg);
+}
+
+
+/*
+** Navbar
+*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--horizontal-padding);
+  background-color: var(--color-navbar-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-list {
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.navbar-item > * {
+  display: block;
+  text-align: center;
+  padding: 12px 12px;
+  color: var(--color-navbar-fg);
+}
+
+.navbar-search {
+  display: block;
+  padding: 6px 6px;
+  margin: 6px 6px;
+  background-color: var(--color-bg);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+
+/*
+** Footer
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-navbar-bg);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-list {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.footer-item > * {
+  display: block;
+  text-align: center;
+  padding: 12px 12px;
+  color: var(--color-navbar-fg);
+}
+
+
+
+/* CSS for each card item */
+.store-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 26px;
+  padding: 0 var(--horizontal-padding);
+  padding-bottom: 5rem;
+}
+
+.card {
+  font-size: 11pt;
+  max-width: 320px;
+  max-height: 400px;
+  color: var(--color-card-fg);
+  background-color: var(--color-card-bg);
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.card-img-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.card img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+
+.card-detail-container {
+  margin: 10px;
+}
+
+.item-img {
+  border-radius: 10px 10px 0 0;
+}
+
+.book-title {
+  color: var(--color-card-fg);
+}
+
+.book-author {
+  color: var(--color-card-fg);
+}
+
+.book-price {
+  color: var(--color-price);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.material-icons {
+  margin: 0;
+  padding: 0;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: 0;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
